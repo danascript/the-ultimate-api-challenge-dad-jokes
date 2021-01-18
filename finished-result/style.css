@@ -1,0 +1,154 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #31e4bb;
+    font-size: 14px;
+    height: 90vh;
+    color: #14213d;
+}
+
+.container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header {
+    font-size: 2.5rem;
+    color: #14213d;
+    font-family: 'Londrina Outline', 'Montserrat', sans-serif;
+}
+
+/* JOKE */
+
+.joke__container {
+    width: 300px;
+    min-height: 200px;
+    height: max-content;
+    border-radius: 10px;
+    border: 2px solid #14213d;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+/* BUTTON */
+
+.button {
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+    position: absolute;
+    bottom: -25px;
+    right: -20px;
+    border: 2px solid #14213d;
+    background-color: #31e4bb;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.button__cta {
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+}
+
+/* LOADER */
+
+.button__loader {
+    display: none;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 auto;
+}
+
+.button__loader:before,
+.button__loader:after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    background-color: #14213d;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loading 2s infinite ease-in-out;
+}
+
+.button__loader:after {
+    animation-delay: -1s;
+}
+
+/* ERROR */
+
+.error__container {
+    display: none;
+}
+
+/* ANIMATIONS */
+
+@keyframes loading {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+@-moz-keyframes loading {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes loading {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
